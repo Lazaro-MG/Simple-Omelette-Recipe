@@ -1,0 +1,129 @@
+:root{
+    /*Colores*/
+    --white: hsl(0, 0%, 100%);
+
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
+    
+    --brown: hsl(14, 45%, 36%);
+    --rose800: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+
+    /*Fuentes*/
+    --outfit: "Outfit", sans-serif;
+    --yuoug: "Young Serif", serif;
+}
+/*Hacks*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    color: var(--stone600);
+    font-family: var(--outfit);
+    line-height: 1.5;    
+}
+img{
+    max-width: 100%;
+}
+@media (min-width: 1440px) {
+    body{
+        background-color: var(--stone100);
+    }
+    .main{
+        width: 60%;
+        margin: 5rem auto;
+        background-color: var(--white);
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        max-width: 90%;
+        border-radius: 2rem;
+        margin-top: 4rem;
+    }
+}
+.main .contenido{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.main .contenido h1{
+    font-family: var(--yuoug);
+    color: var(--stone900);
+}
+.preparation{
+    background-color: var(--rose50);
+    padding: 1.8rem;
+    font-family: var(--outfit);
+    border-radius: 1.5rem;
+}
+.preparation h3{
+    color: var(--rose800);
+    margin: 0;
+    padding: 0;
+}
+.preparation ul li span{
+    font-weight: bold;
+}
+.preparation ul li::marker{
+    color: var(--rose800);
+}
+.contenido h2{
+    color: var(--brown);
+    font-family: var(--yuoug);
+}
+.contenido ul li{
+    line-height: 2;
+}
+hr{
+    border: .5px solid var(--stone150);
+    margin-top: 2.5rem;
+}
+
+ol {
+    list-style: none; 
+    counter-reset: list-counter; 
+    padding: 0;
+}
+  
+ol li {
+    counter-increment: list-counter; 
+    position: relative;
+    padding-left: 30px;
+}
+  
+ol li::before {
+   content: counter(list-counter) ". ";
+   position: absolute;
+   left: 0; 
+   color: var(--brown);
+   font-weight: bold;
+}
+
+table{
+    width: 100%;
+    margin-bottom: 3rem;
+    border-collapse: collapse; 
+    width: 100%;
+}
+tbody tr{
+    border-bottom: 2px solid var(--stone150);
+}
+tbody tr:last-of-type{
+    border: none;
+}
+td{
+    padding: 1rem 1rem 1rem 2rem;
+}
+td:nth-child(2){
+    font-weight: bold;
+    color: var(--brown);
+}
